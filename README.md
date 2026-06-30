@@ -8,7 +8,7 @@ Built using **React**, **Tailwind CSS v4**, and **reactive SVG visuals** to demo
 
 ## 🚀 Live Demo & Deployment
 - **GitHub Repository:** [https://github.com/MurtuzaShaikh26/Transformer_Mech_Visualizer](https://github.com/MurtuzaShaikh26/Transformer_Mech_Visualizer)
-- **Vercel Deployment:** Automatically linked to the main branch of the GitHub repository.
+- **Vercel Deployment:** [https://transformer-mech-visualizer.vercel.app](https://transformer-mech-visualizer.vercel.app) (Automatically linked to GitHub CI/CD)
 
 ---
 

@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --color-darkBg: #0b0f19;
+  --color-cardBg: rgba(17, 25, 40, 0.75);
+  --color-accentCyan: #06b6d4;
+  --color-accentPurple: #a855f7;
+  --color-accentPink: #ec4899;
+  --font-sans: 'Outfit', 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--color-darkBg);
+  color: #f1f5f9;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(10, 20, 40, 0.5) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(30, 10, 40, 0.4) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(17, 25, 40, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.2);
+}
+
+/* Glow Elements */
+.glow-cyan {
+  box-shadow: 0 0 15px 1px rgba(6, 182, 212, 0.45);
+}
+
+.glow-purple {
+  box-shadow: 0 0 15px 1px rgba(168, 85, 247, 0.45);
+}
+
+.glow-pink {
+  box-shadow: 0 0 15px 1px rgba(236, 72, 153, 0.45);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Custom animations for token data flow */
+@keyframes flowLine {
+  from {
+    stroke-dashoffset: 20;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-flow-line {
+  stroke-dasharray: 6, 4;
+  animation: flowLine 0.8s linear infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+/* Custom Math Formula Styling */
+.math-font {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
